@@ -77,94 +77,279 @@ class _PageCadastroState extends State<PageCadastro> {
           ),
         ),
         body: SingleChildScrollView(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Container(
-              alignment: Alignment.center,
-              margin: const EdgeInsets.all(20.0),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                elevation: 6,
-                semanticContainer: true,
-                shadowColor: Colors.black,
-                color: Colors.white,
-                child: SizedBox(
-                  width: 400,
-                  height: 280,
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-                    child: Column(
-                      children: [
-                        const Text(
-                          'Dados Pessoais',
-                          style: TextStyle(
-                            color: Color(0xFFa2a2a2),
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: ListTile(
-                                horizontalTitleGap: -10,
-                                title: const Text(
-                                  'Pessoa Física',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                  ),
-                                ),
-                                leading: Radio<Person>(
-                                  value: Person.fisica,
-                                  activeColor: Colors.black,
-                                  groupValue: _person,
-                                  onChanged: (Person? value) {
-                                    setState(() {
-                                      _person = value;
-                                    });
-                                  },
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              child: ListTile(
-                                horizontalTitleGap: -10,
-                                title: const Text(
-                                  'Pessoa Juridica',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                  ),
-                                ),
-                                leading: Radio<Person>(
-                                  value: Person.juridica,
-                                  activeColor: Colors.black,
-                                  groupValue: _person,
-                                  onChanged: (Person? value) {
-                                    setState(() {
-                                      _person = value;
-                                    });
-                                  },
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Container(
-                          child: TextFormField(
-                            decoration: const InputDecoration(
-                              isDense: true,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                color: const Color(0xFFf6f6f6),
+                alignment: Alignment.center,
+                margin: const EdgeInsets.all(20.0),
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  elevation: 6,
+                  semanticContainer: true,
+                  shadowColor: Colors.black,
+                  color: const Color(0xFFFFFFFF),
+                  child: SizedBox(
+                    width: 400,
+                    height: 330,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 5, vertical: 10),
+                      child: Column(
+                        children: [
+                          const Text(
+                            'Dados Pessoais',
+                            style: TextStyle(
+                              color: Color(0xFFa2a2a2),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
                             ),
                           ),
-                        ),
-                      ],
+                          Row(
+                            children: [
+                              Expanded(
+                                child: ListTile(
+                                  horizontalTitleGap: -10,
+                                  title: const Text(
+                                    'Pessoa Física',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                  leading: Radio<Person>(
+                                    value: Person.fisica,
+                                    activeColor: Colors.black,
+                                    groupValue: _person,
+                                    onChanged: (Person? value) {
+                                      setState(() {
+                                        _person = value;
+                                      });
+                                    },
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: ListTile(
+                                  horizontalTitleGap: -10,
+                                  title: const Text(
+                                    'Pessoa Juridica',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                  leading: Radio<Person>(
+                                    value: Person.juridica,
+                                    activeColor: Colors.black,
+                                    groupValue: _person,
+                                    onChanged: (Person? value) {
+                                      setState(() {
+                                        _person = value;
+                                      });
+                                    },
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            padding: const EdgeInsets.only(left: 20, bottom: 5),
+                            child: const Text(
+                              'Nome',
+                              style: TextStyle(
+                                  color: Color(0xFFa2a2a2),
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            padding: const EdgeInsets.only(left: 15, right: 15),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                hintText: 'Nome',
+                                hintStyle: TextStyle(
+                                    color: Color(0xFFa2a2a2), fontSize: 13),
+                                filled: true,
+                                fillColor: Color(0xFFf6f6f6),
+                                contentPadding: EdgeInsets.only(
+                                    left: 5, right: 8, top: 5, bottom: 5),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(15)),
+                                    borderSide:
+                                        BorderSide(color: Color(0xFFf6f6f6))),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(15)),
+                                  borderSide: BorderSide(
+                                      color: Color(0xFFf3a044), width: 2.0),
+                                ),
+                              ),
+                              style: const TextStyle(color: Colors.black),
+                            ),
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            padding: const EdgeInsets.only(
+                                left: 20, bottom: 5, top: 10),
+                            child: const Text(
+                              'CPF',
+                              style: TextStyle(
+                                  color: Color(0xFFa2a2a2),
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            padding: const EdgeInsets.only(left: 15, right: 15),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                hintText: 'CPF',
+                                hintStyle: TextStyle(
+                                    color: Color(0xFFa2a2a2), fontSize: 13),
+                                filled: true,
+                                fillColor: Color(0xFFf6f6f6),
+                                contentPadding: EdgeInsets.only(
+                                    left: 5, right: 8, top: 5, bottom: 5),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(15)),
+                                    borderSide:
+                                        BorderSide(color: Color(0xFFf6f6f6))),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(15)),
+                                  borderSide: BorderSide(
+                                      color: Color(0xFFf3a044), width: 2.0),
+                                ),
+                              ),
+                              style: const TextStyle(color: Colors.black),
+                            ),
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            padding: const EdgeInsets.only(
+                                left: 20, bottom: 5, top: 10),
+                            child: const Text(
+                              'Data de Nascimento',
+                              style: TextStyle(
+                                  color: Color(0xFFa2a2a2),
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            padding: const EdgeInsets.only(left: 15, right: 15),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                hintText: 'Data de Nascimento',
+                                hintStyle: TextStyle(
+                                    color: Color(0xFFa2a2a2), fontSize: 13),
+                                filled: true,
+                                fillColor: Color(0xFFf6f6f6),
+                                contentPadding: EdgeInsets.only(
+                                    left: 5, right: 8, top: 5, bottom: 5),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(15)),
+                                    borderSide:
+                                        BorderSide(color: Color(0xFFf6f6f6))),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(15)),
+                                  borderSide: BorderSide(
+                                      color: Color(0xFFf3a044), width: 2.0),
+                                ),
+                              ),
+                              style: const TextStyle(color: Colors.black),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-          ]),
+              Container(
+                color: const Color(0xFFf6f6f6),
+                alignment: Alignment.center,
+                margin: const EdgeInsets.all(20.0),
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  elevation: 6,
+                  semanticContainer: true,
+                  shadowColor: Colors.black,
+                  color: const Color(0xFFFFFFFF),
+                  child: SizedBox(
+                    width: 400,
+                    height: 330,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 5, vertical: 10),
+                      child: Column(
+                        children:  [
+                          const Text(
+                            'Contato',
+                            style: TextStyle(
+                              color: Color(0xFFa2a2a2),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            padding: const EdgeInsets.only(left: 20, bottom: 5),
+                            child: const Text(
+                              'Email',
+                              style: TextStyle(
+                                  color: Color(0xFFa2a2a2),
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            padding: const EdgeInsets.only(left: 15, right: 15),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                hintText: 'Email',
+                                hintStyle: TextStyle(
+                                    color: Color(0xFFa2a2a2), fontSize: 13),
+                                filled: true,
+                                fillColor: Color(0xFFf6f6f6),
+                                contentPadding: EdgeInsets.only(
+                                    left: 5, right: 8, top: 5, bottom: 5),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(15)),
+                                    borderSide:
+                                        BorderSide(color: Color(0xFFf6f6f6))),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(15)),
+                                  borderSide: BorderSide(
+                                      color: Color(0xFFf3a044), width: 2.0),
+                                ),
+                              ),
+                              style: const TextStyle(color: Colors.black),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

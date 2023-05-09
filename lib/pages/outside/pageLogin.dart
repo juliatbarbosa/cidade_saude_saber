@@ -207,7 +207,7 @@ class _PageLoginState extends State<PageLogin> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const PageCadastro()));
+                                  builder: (context) =>  PageCadastro()));
                         },
                         child: const Text(
                           'Cadastre-se',

@@ -49,6 +49,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  dropdown_button2:
+    dependency: "direct main"
+    description:
+      name: dropdown_button2
+      sha256: "193e97bfe9fd3d89317bddb6129653781fa9b62d99811d49f633e67ea449a62c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.0"
+  easy_mask:
+    dependency: "direct main"
+    description:
+      name: easy_mask
+      sha256: be5e8c5e25a25f840e5679c6ad3f79602898783b6df4d97583c2d462f4757b1a
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   fake_async:
     dependency: transitive
     description:
@@ -186,3 +202,4 @@ packages:
     version: "2.1.4"
 sdks:
   dart: ">=2.19.6 <3.0.0"
+  flutter: ">=3.0.0"

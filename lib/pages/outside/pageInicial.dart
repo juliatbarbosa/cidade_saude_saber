@@ -173,7 +173,7 @@ class _PageInicialState extends State<PageInicial> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const PageCadastro(),
+                      builder: (context) =>  PageCadastro(),
                     ),
                   );
                 },

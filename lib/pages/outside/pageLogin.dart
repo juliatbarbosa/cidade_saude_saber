@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:cidade_sds/pages/inside/pageHome.dart';
 import 'package:cidade_sds/pages/outside/pageCadastro.dart';
 import 'package:cidade_sds/pages/outside/pageInicial.dart';
 import 'package:cidade_sds/pages/outside/recuperarSenha/pageSolicitaSenha.dart';
@@ -22,6 +23,8 @@ class _PageLoginState extends State<PageLogin> {
 
   @override
   Widget build(BuildContext context) {
+
+/* ---------------------------INPUT EMAIL------------------------------ */
     final txtDocumento = Container(
       margin: const EdgeInsets.only(left: 20, right: 20),
       child: TextFormField(
@@ -45,6 +48,7 @@ class _PageLoginState extends State<PageLogin> {
       ),
     );
 
+/* ---------------------------ESQUECEU A SENHA------------------------------ */
     final esqueciConta = Container(
       alignment: Alignment.topRight,
       padding: const EdgeInsets.only(right: 40),
@@ -65,6 +69,7 @@ class _PageLoginState extends State<PageLogin> {
       ),
     );
 
+/* ---------------------------INPUT SENHA------------------------------ */
     final txtSenha = Container(
       margin: const EdgeInsets.only(left: 20, right: 20),
       child: TextFormField(
@@ -112,6 +117,8 @@ class _PageLoginState extends State<PageLogin> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
+
+/* ---------------------------IMAGEM LOGIN------------------------------ */
                   Container(
                     height: 280,
                     alignment: Alignment.center,
@@ -127,12 +134,15 @@ class _PageLoginState extends State<PageLogin> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  
+                  const SizedBox(height: 20), //INPUT EMAIL
                   txtDocumento,
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 10), //ESQUECEU A CONTA
                   esqueciConta,
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 20), //INPUT SENHA
                   txtSenha,
+
+/* ---------------------------LEMBRAR-ME------------------------------ */
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -157,6 +167,8 @@ class _PageLoginState extends State<PageLogin> {
                       )
                     ],
                   ),
+                  
+/* ---------------------------BOTÃO LOGIN------------------------------ */
                   Container(
                     alignment: Alignment.center,
                     child: GestureDetector(
@@ -164,7 +176,7 @@ class _PageLoginState extends State<PageLogin> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const PageLogin(),
+                            builder: (context) => const PageHome(),
                           ),
                         );
                       },
@@ -195,6 +207,8 @@ class _PageLoginState extends State<PageLogin> {
                       ),
                     ),
                   ),
+                  
+/* ---------------------------NÃO POSSUI UMA CONTA?------------------------------ */
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -219,6 +233,7 @@ class _PageLoginState extends State<PageLogin> {
                       ),
                     ],
                   ),
+                
                 ],
               ),
             )),

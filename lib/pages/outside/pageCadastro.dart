@@ -3,6 +3,8 @@ import 'package:easy_mask/easy_mask.dart';
 import 'package:cidade_sds/pages/outside/pageInicial.dart';
 import 'package:flutter/material.dart';
 
+import '../inside/pageHome.dart';
+
 class PageCadastro extends StatefulWidget {
   const PageCadastro({Key? key}) : super(key: key);
 
@@ -91,7 +93,6 @@ class _PageCadastroState extends State<PageCadastro> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
 /* ---------------------------DADOS PESSOAIS------------------------------ */
-
               Container(
                 color: const Color(0xFFf6f6f6),
                 alignment: Alignment.center,
@@ -298,7 +299,6 @@ class _PageCadastroState extends State<PageCadastro> {
               ),
 
 /* ---------------------------CONTATO----------------------------------- */
-
               Container(
                 color: const Color(0xFFf6f6f6),
                 alignment: Alignment.center,
@@ -463,7 +463,6 @@ class _PageCadastroState extends State<PageCadastro> {
               ),
 
 /* ---------------------------TRABALHO----------------------------------- */
-
               Container(
                 color: const Color(0xFFf6f6f6),
                 alignment: Alignment.center,
@@ -580,7 +579,6 @@ class _PageCadastroState extends State<PageCadastro> {
               ),
 
 /* ---------------------------CIDADE----------------------------------- */
-
               Container(
                 color: const Color(0xFFf6f6f6),
                 alignment: Alignment.center,
@@ -743,7 +741,6 @@ class _PageCadastroState extends State<PageCadastro> {
               ),
 
 /* ---------------------------SENHA----------------------------------- */
-
               Container(
                 color: const Color(0xFFf6f6f6),
                 alignment: Alignment.center,
@@ -862,7 +859,6 @@ class _PageCadastroState extends State<PageCadastro> {
               ),
 
 /* ---------------------------CHECKBOX----------------------------------- */
-
               Padding(
                 padding: const EdgeInsets.only(left: 30),
                 child: Row(
@@ -884,8 +880,8 @@ class _PageCadastroState extends State<PageCadastro> {
               ),
 
 /* ---------------------------TERMOS----------------------------------- */
-
-              Row(mainAxisAlignment: MainAxisAlignment.center,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
                   Text(
                     'Termos de Uso',
@@ -912,35 +908,47 @@ class _PageCadastroState extends State<PageCadastro> {
                   ),
                 ],
               ),
-              
-/* ---------------------------BOTÃO----------------------------------- */
 
+/* ---------------------------BOTÃO----------------------------------- */
               Container(
-                  width: 280,
-                  height: 40,
-                  margin: const EdgeInsets.only(top: 20, bottom: 20),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF276479),
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: const[
-                       BoxShadow(
-                        color: Colors.black26,
-                        spreadRadius: 2,
-                        blurRadius: 10,
-                        offset: Offset(0, 3),
+                alignment: Alignment.center,
+                child: GestureDetector(
+                  onTap: () async {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PageHome(),
                       ),
-                    ],
-                  ),
-                  child: const Text(
-                    'CADASTRAR',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                        color: Colors.white),
-                        textAlign: TextAlign.center,
+                    );
+                  },
+                  child: Container(
+                    width: 280,
+                    height: 40,
+                    margin: const EdgeInsets.only(top: 20, bottom: 20),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF276479),
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black26,
+                          spreadRadius: 2,
+                          blurRadius: 10,
+                          offset: Offset(0, 3),
+                        ),
+                      ],
+                    ),
+                    child: const Text(
+                      'CADASTRAR',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: Colors.white),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
+              ),
             ],
           ),
         ),

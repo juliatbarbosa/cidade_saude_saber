@@ -39,6 +39,8 @@ class _PageInicialState extends State<PageInicial> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+
+/* ---------------------------IMAGEM LOGOS------------------------------ */
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -76,6 +78,8 @@ class _PageInicialState extends State<PageInicial> {
                   ),
                 ],
               ),
+              
+/* ---------------------------FRASE 1 ------------------------------ */
               Container(
                 decoration: const BoxDecoration(
                   color: Color(0xFFf3a044),
@@ -102,6 +106,8 @@ class _PageInicialState extends State<PageInicial> {
                   ),
                 ),
               ),
+              
+/* ---------------------------IMAGEM INICIAL------------------------------ */
               Container(
                 height: 200,
                 alignment: Alignment.center,
@@ -115,6 +121,8 @@ class _PageInicialState extends State<PageInicial> {
                   ),
                 ),
               ),
+
+/* ---------------------------FRASE 2------------------------------ */
               Container(
                 margin: const EdgeInsets.only(top: 20),
                 child: RichText(
@@ -133,6 +141,8 @@ class _PageInicialState extends State<PageInicial> {
                   textAlign: TextAlign.center,
                 ),
               ),
+
+/* ---------------------------BOTÃO LOGIN------------------------------ */
               GestureDetector(
                 onTap: () async {
                   Navigator.push(
@@ -168,6 +178,8 @@ class _PageInicialState extends State<PageInicial> {
                   ),
                 ),
               ),
+              
+/* ---------------------------BOTÃO CRIAR CONTA------------------------------ */
               GestureDetector(
                 onTap: () async {
                   Navigator.push(

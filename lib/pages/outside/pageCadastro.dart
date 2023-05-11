@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:cidade_sds/pages/outside/pageLogin.dart';
 import 'package:easy_mask/easy_mask.dart';
 import 'package:cidade_sds/pages/outside/pageInicial.dart';
 import 'package:flutter/material.dart';
@@ -917,7 +918,7 @@ class _PageCadastroState extends State<PageCadastro> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const PageHome(),
+                        builder: (context) => const PageLogin(),
                       ),
                     );
                   },

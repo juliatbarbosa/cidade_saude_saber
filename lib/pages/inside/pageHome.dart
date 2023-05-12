@@ -22,6 +22,7 @@ class _PageHomeState extends State<PageHome> {
       onWillPop: () async => true,
       child: Scaffold(
         extendBodyBehindAppBar: true,
+/* ---------------------------MENU LATERAL----------------------------------- */
         drawer: Drawer(
           child: Column(
             children: [
@@ -38,6 +39,7 @@ class _PageHomeState extends State<PageHome> {
                     ],
                   ),
                 ),
+/* ---------------------------LOGO----------------------------------- */
                 child: Column(
                   children: [
                     Container(
@@ -49,6 +51,7 @@ class _PageHomeState extends State<PageHome> {
                         width: 60,
                       ),
                     ),
+/* ---------------------------ICONE FOTO----------------------------------- */
                     Row(
                       children: [
                         Container(
@@ -59,6 +62,7 @@ class _PageHomeState extends State<PageHome> {
                             size: 60,
                           ),
                         ),
+/* ---------------------------NOME----------------------------------- */
                         const Text(
                           'Nome',
                           style: TextStyle(
@@ -72,6 +76,7 @@ class _PageHomeState extends State<PageHome> {
                   ],
                 ),
               ),
+/* ---------------------------ITENS MENU----------------------------------- */
               Row(
                 children: [
                   Container(
@@ -254,6 +259,7 @@ class _PageHomeState extends State<PageHome> {
                   ),
                 ),
               ),
+/* ---------------------------BOTÃO SAIR----------------------------------- */
               Container(
                 margin: const EdgeInsets.only(top: 150),
                 child: Container(
@@ -347,6 +353,7 @@ class _PageHomeState extends State<PageHome> {
                       alignment: Alignment.center,
                       margin: const EdgeInsets.only(
                           top: 130, left: 10, bottom: 10, right: 10),
+/* ---------------------------CARD 1----------------------------------- */
                       child: Card(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),
@@ -481,6 +488,7 @@ class _PageHomeState extends State<PageHome> {
                       ),
                     ),
                   ),
+/* ---------------------------TITULO CARD 1----------------------------------- */
                   Positioned(
                     left: 140,
                     top: -15,
@@ -514,6 +522,7 @@ class _PageHomeState extends State<PageHome> {
                       alignment: Alignment.center,
                       margin: const EdgeInsets.only(
                           top: 20, left: 10, bottom: 10, right: 10),
+/* ---------------------------CARD 2----------------------------------- */
                       child: Card(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),
@@ -540,6 +549,7 @@ class _PageHomeState extends State<PageHome> {
                       ),
                     ),
                   ),
+/* ---------------------------TITULO CARD 2----------------------------------- */
                   Positioned(
                     left: 140,
                     top: -15,
